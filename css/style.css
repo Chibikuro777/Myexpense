@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+header, footer{
+    width: 100%;
+    height: 100px;
+    background-color: salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+
+.input_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+button{
+    list-style: none;
+    width: 50%;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: springgreen;
+    font-size: 14px;
+}
+
+form{
+    width: 60%;
+}
+
+header>h1{
+    font-size: 40px;
+}
+
+article>p{
+    margin-bottom: 5%;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2%;
+}
+
+.details{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.details>section, .details>article{
+    height: 100%;
+}
+
+.details>article{
+    margin: 0 5%;
+}
+
+.details>section, .details>article, .details>aside{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 2%;
+    width: 30%;
+}
+
+.details>aside{
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.details>section p, .details>section li, .details>aside p{
+    margin-bottom: 5%;
+}
+
+.details>aside li, .details>aside p:first-child, .details>section p:first-child, .details>article p:first-child{
+    font-weight: bold;
+    text-decoration: solid underline gold;
+}
+
+.category{
+    margin: 0 5%;
+}
+
+
+
