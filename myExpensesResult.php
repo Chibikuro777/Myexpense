@@ -12,7 +12,7 @@
     $expense->month = "March";
 
     // 収支の計算を変数化
-    $income = 215000;
+    $income = 200000;
     $rent = 43000;
     $balance = $income - $rent;
 
@@ -67,11 +67,11 @@
             </article>
 
             <aside>
+                <p>-The Summary-</p>
                 <ol>
-                    <p>-The Summary-</p>
-                    <li><?php foreach ($stmt as $row) :?></li>
+                    <?php foreach ($stmt as $row) :?>
                     <li><?= $row["date"]?></li>
-                    <p><?= $row["category"]. " : ". "¥".number_format($row["expense"])?></p><br>
+                    <p><?= $row["category"].  " : ". "¥".number_format($row["expense"])?></p>
                     <?php endforeach; ?>
                 </ol>
             </aside>

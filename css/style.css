@@ -89,6 +89,14 @@ article{
     overflow-y: scroll;
 }
 
+.details>aside ol{
+    padding-left: 10%;
+}
+
+.details>aside li{
+    list-style-type: decimal;
+}
+
 .details>section p, .details>section li, .details>aside p{
     margin-bottom: 5%;
 }

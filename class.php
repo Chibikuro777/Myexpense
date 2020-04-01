@@ -21,14 +21,6 @@
             return $sum;
         }
 
-        // public function isTotalExpense($expense)
-        // {
-        //     $this->post = $_POST;
-        //     if(!empty($this->post["expense"]))
-        //     $expense = $this->post["expense"];
-        //     return $expense;
-        // }
-
         public function OutputCategory()
         {
             foreach($this->category_data as $category_data_val){
