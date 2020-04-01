@@ -1,9 +1,9 @@
 <?php
 
     $post = $_POST;
-    $date = $post["date"];
-    $category = $post["category"];
-    $expense = $post["expense"];
+    $date = getenv($post["date"]);
+    $category = getenv($post["category"]);
+    $expense = getenv($post["expense"]);
 
    
         try{
