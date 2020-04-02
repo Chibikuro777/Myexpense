@@ -5,10 +5,10 @@
     $category = $post["category"];
     $expense = $post["expense"];
 
-    $host = getenv('us-cdbr-iron-east-01.cleardb.net');
-    $dbname = getenv('heroku_3d1f3b4f317ba1c');
-    $password = getenv('9dfbf63f');
-    $user = getenv('bea9ee3b212bdf');
+    $host = $_ENV['DB_HOST'];
+    $dbname = $_ENV['DB_NAME'];
+    $password = $_ENV['DB_PASSWORD'];
+    $user = $_ENV['DB_USER'];
 
    
         try{
