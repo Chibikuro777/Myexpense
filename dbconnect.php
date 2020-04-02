@@ -1,16 +1,16 @@
 <?php
 
     $post = $_POST;
-    $date = getenv($post["date"]);
-    $category = getenv($post["category"]);
-    $expense = getenv($post["expense"]);
+    $date = $post["date"];
+    $category = $post["category"];
+    $expense = $post["expense"];
 
    
         try{
 
             if ($_SERVER["REQUEST_METHOD"] !== "POST" || $post["button"] !== "click" ||
                 empty($date) || empty($category) || empty($expense)
-            ) {
+            ){
                 header("location: myExpenses.php");
                 exit;
             }
@@ -49,7 +49,7 @@
             $sum_entertainment_expenses = "SELECT SUM(expense) AS total_entertainment_expenses FROM expenses WHERE category = 'Entertainment_expenses'";
             $total_entertainment_expenses = $PDO->query($sum_entertainment_expenses);
 
-        } catch(PDOException $e) {
+        }catch(PDOException $e) {
 
             exit("データベースに：接続出来ませんでした。".$e->getMessage());
 
