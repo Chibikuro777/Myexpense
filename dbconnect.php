@@ -5,6 +5,11 @@
     $category = $post["category"];
     $expense = $post["expense"];
 
+    $host = $_ENV['DB_HOST'];
+    $dbname = $_ENV['DB_NAME'];
+    $password = $_ENV['DB_PASSWORD'];
+    $user = $_ENV['DB_USER'];
+
    
         try{
 
@@ -16,8 +21,9 @@
             }
 
             // データベースに接続
-            $PDO = new PDO("mysql:dbname=my_expenses;host=localhost;charset=utf8", "root", "root");
-            $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $PDO = new PDO("mysql:dbname=$dbname;host=$host;charset=utf8", $user, $password);
+            $PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // SQLでエラーが表示された場合、画面にエラーが出力される
+            $PDO->setattribute(PDO::ATTR_EMULATE_PREPARES, false); // SQLインジェクション対策
 
             // データベースに書き込み
             $sql = "INSERT INTO expenses (date, category, expense) VALUES (?, ?, ?)";
