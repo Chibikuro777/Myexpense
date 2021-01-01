@@ -44,7 +44,7 @@ $expense->month = "March";
 
             </div>
             <div class="button">
-                <button type="submit" name="button" value="click">Caluculate</button>
+                <button type="submit" name="button" value="click">Calculate</button>
             </div>
         </form>
     </main>
