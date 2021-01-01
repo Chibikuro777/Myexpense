@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -20,7 +20,7 @@ try {
         $_SERVER["REQUEST_METHOD"] !== "POST" || $post["button"] !== "click" ||
         empty($date) || empty($category) || empty($expense)
     ) {
-        header("location: myExpenses.php");
+        header("location: index.php");
         exit;
     }
 

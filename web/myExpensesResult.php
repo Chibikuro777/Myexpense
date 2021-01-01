@@ -3,7 +3,7 @@ require_once("class.php");
 require_once("dbconnect.php");
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST" || $post["button"] !== "click") {
-    header("location: myExpenses.php");
+    header("location: index.php");
     exit;
 }
 
@@ -81,7 +81,7 @@ $balance = $income - $rent;
             <?php endif; ?>
         </div>
 
-        <form action="myExpenses.php" method="POST">
+        <form action="index.php" method="POST">
             <div class="button">
                 <button name="back">Back</button>
             </div>
